@@ -1,0 +1,52 @@
+@import url('./dashboard-wisudawan.css');
+
+/* Placeholder CSS for Info Kursi page */
+.page-empty{background:#fff;border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(2,6,23,0.04);}
+
+/* Added styles for wisudawan kursi page */
+.kursi-page .detail-seat-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.seat-card{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#18a34b,#0e7735);color:#fff;width:150px;box-shadow:0 6px 16px rgba(14,119,53,0.18)}
+.seat-card .seat-icon{font-size:20px}
+.seat-card .seat-number{font-weight:800;font-size:18px}
+
+.info-banner{display:flex;gap:12px;align-items:flex-start;background:#ecfdf5;border-left:4px solid #10b981;color:#065f46;padding:12px;border-radius:8px;margin-top:10px}
+.box-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#10b981;color:#fff;font-size:16px;font-weight:700;border-radius:50%;margin-right:8px}
+.info-banner .info-icon{font-size:16px;background:#10b981;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;margin-right:8px}
+.info-banner .info-text{font-size:14px}
+
+/* seating layout (small simplified copy of admin styles) */
+.profile-layout .side-section{background:#fff;border-radius:10px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.small-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.seat{aspect-ratio:1;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;padding:6px}
+.seat.female{background:linear-gradient(135deg,#fce7f3,#f472b6);color:#831843}
+.seat.male{background:linear-gradient(135deg,#dbeafe,#60a5fa);color:#0c4a6e}
+.seat.empty{background:#e5e7eb;color:#6b7280}
+.seat.user-seat{background:linear-gradient(90deg,#fde68a,#f59e0b);color:#1f2937;position:relative;overflow:visible}
+/* stronger selector to override admin CSS if necessary */
+.kursi-page .seat.user-seat{background:#f59e0b !important;color:#1f2937 !important;border:2px solid rgba(0,0,0,0.06) !important}
+/* corner badge for user's seat */
+.seat .label-you{position:absolute;top:6px;right:6px;background:rgba(0,0,0,0.08);font-size:10px;padding:4px 6px;border-radius:8px;color:#111;font-weight:700}
+
+/* pulse animation to draw attention when seat found */
+.seat.user-seat-found{box-shadow:0 0 0 6px rgba(245,158,11,0.12);animation:seat-pulse 1.2s ease-in-out 0s 2}
+@keyframes seat-pulse{
+	0%{transform:scale(1);box-shadow:0 0 0 0 rgba(245,158,11,0.22)}
+	70%{transform:scale(1.03);box-shadow:0 0 0 12px rgba(245,158,11,0.05)}
+	100%{transform:scale(1);box-shadow:0 0 0 0 rgba(245,158,11,0)}
+}
+
+.profile-legend{display:flex;gap:18px;align-items:center;margin-top:12px}
+.profile-legend .legend-item{display:flex;gap:8px;align-items:center;color:#374151;font-weight:600}
+.legend-color{width:20px;height:20px;border-radius:6px}
+.legend-color.you{background:linear-gradient(90deg,#fde68a,#f59e0b)}
+.legend-color.male{background:linear-gradient(135deg,#dbeafe,#60a5fa)}
+.legend-color.female{background:linear-gradient(135deg,#fce7f3,#f472b6)}
+.legend-color.empty{background:#e5e7eb}
+
+.info-card ul{margin:8px 0 0 18px;color:#07204b}
+.card-blue{background:linear-gradient(90deg,#dbeafe,#93c5fd);color:#07204b}
+.card-green{background:linear-gradient(90deg,#dcfce7,#86efac);color:#064e2c}
+
+/* small adjustments for consistent spacing */
+.kursi-page h3{margin:8px 0}
+.kursi-page h4{margin:0 0 8px 0}

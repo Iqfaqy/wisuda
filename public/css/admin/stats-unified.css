@@ -1,0 +1,224 @@
+/* ============================================
+   UNIFIED STATISTICS STYLES - Untuk Semua Halaman Admin
+   Konsisten dengan laporan.css
+   ============================================ */
+
+/* STATISTICS GRID */
+.stats-grid,
+.stats-section,
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Responsive untuk 3 kolom */
+@media (max-width: 1200px) {
+  .stats-grid,
+  .stats-section,
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive untuk 2 kolom */
+@media (max-width: 768px) {
+  .stats-grid,
+  .stats-section,
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive untuk 1 kolom */
+@media (max-width: 480px) {
+  .stats-grid,
+  .stats-section,
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* STAT CARD - UNIFIED STYLE */
+.stat-card,
+.stat-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 6px solid #1b5e20;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover,
+.stat-box:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+/* Warna berbeda untuk kategori berbeda */
+.stat-card.primary,
+.stat-box.primary,
+.stat-primary {
+  border-left-color: #1b5e20;
+}
+
+.stat-card.success,
+.stat-box.success,
+.stat-success {
+  border-left-color: #10b981;
+}
+
+.stat-card.warning,
+.stat-box.warning,
+.stat-warning {
+  border-left-color: #f59e0b;
+}
+
+.stat-card.danger,
+.stat-box.danger,
+.stat-danger {
+  border-left-color: #ef4444;
+}
+
+/* ICON CONTAINER */
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #f0f9f4;
+  color: #1b5e20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.stat-card.success .stat-icon,
+.stat-box.success .stat-icon,
+.stat-success .stat-icon {
+  background: #ecfdf5;
+  color: #10b981;
+}
+
+.stat-card.warning .stat-icon,
+.stat-box.warning .stat-icon,
+.stat-warning .stat-icon {
+  background: #fffbeb;
+  color: #f59e0b;
+}
+
+.stat-card.danger .stat-icon,
+.stat-box.danger .stat-icon,
+.stat-danger .stat-icon {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* STAT HEADER (untuk qrcode style) */
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.stat-header i {
+  font-size: 28px;
+  color: #1b5e20;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f9f4;
+  border-radius: 8px;
+}
+
+.stat-primary .stat-header i {
+  color: #1b5e20;
+  background: #f0f9f4;
+}
+
+.stat-success .stat-header i {
+  color: #10b981;
+  background: #ecfdf5;
+}
+
+.stat-warning .stat-header i {
+  color: #f59e0b;
+  background: #fffbeb;
+}
+
+/* STAT VALUE & LABEL */
+.stat-value,
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.stat-number {
+  font-size: 32px;
+}
+
+.stat-label,
+.stat-text {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+/* Gradient background untuk variant tertentu */
+.stat-primary {
+  background: linear-gradient(135deg, #f0f9f4 0%, #ffffff 100%);
+}
+
+.stat-success {
+  background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
+}
+
+.stat-warning {
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+}
+
+.stat-danger {
+  background: linear-gradient(135deg, #fee2e2 0%, #ffffff 100%);
+}
+
+/* Dark background variant (untuk kursi & presensi) */
+.stat-box.dark,
+.stat-card.dark {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  color: #ffffff;
+  border-left: none;
+  box-shadow: 0 4px 12px rgba(27,94,32,0.25);
+}
+
+.stat-box.dark:hover,
+.stat-card.dark:hover {
+  box-shadow: 0 6px 16px rgba(27,94,32,0.3);
+}
+
+.stat-box.dark .stat-number,
+.stat-box.dark .stat-value {
+  color: #ffffff;
+}
+
+.stat-box.dark .stat-text,
+.stat-box.dark .stat-label {
+  color: rgba(255,255,255,0.85);
+}

@@ -1,0 +1,10 @@
+@import url('./dashboard-wisudawan.css');
+
+/* Placeholder CSS for Foto Wisuda page */
+.page-empty{background:#fff;border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(2,6,23,0.04);}
+
+/* Foto page styles */
+.foto-card{display:flex;flex-direction:column;gap:12px;align-items:center;padding:20px}
+.foto-preview{background:#fff;border-radius:10px;padding:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.foto-preview img{display:block;border-radius:6px}
+.foto-card input[type=file]{border:1px dashed #e5e7eb;padding:8px;border-radius:8px}

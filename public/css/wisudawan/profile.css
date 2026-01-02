@@ -1,0 +1,91 @@
+@import url('./dashboard-wisudawan.css');
+
+/* Page-specific overrides (empty placeholder) */
+.page-empty{background:#fff;border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(2,6,23,0.04);}
+.page-empty h2{margin:0 0 10px 0}
+
+/* Profile page additions */
+.profile-page .detail-seat-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.seat-card{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#18a34b,#0e7735);color:#fff;width:150px;box-shadow:0 6px 16px rgba(14,119,53,0.18)}
+.seat-card .seat-icon{font-size:20px}
+.seat-card .seat-number{font-weight:800;font-size:18px}
+
+.info-banner{display:flex;gap:12px;align-items:flex-start;background:#ecfdf5;border-left:4px solid #10b981;color:#065f46;padding:12px;border-radius:8px;margin:12px 0}
+.info-banner .info-icon{font-size:20px}
+.info-banner .info-text{font-size:14px}
+
+/* seating layout (small simplified copy of admin styles) */
+.profile-layout .side-section{background:#fff;border-radius:10px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.small-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.seat{aspect-ratio:1;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;padding:6px}
+.seat.female{background:linear-gradient(135deg,#fce7f3,#f472b6);color:#831843}
+.seat.male{background:linear-gradient(135deg,#dbeafe,#60a5fa);color:#0c4a6e}
+.seat.empty{background:#e5e7eb;color:#6b7280}
+.seat.user-seat{background:linear-gradient(90deg,#fde68a,#f59e0b);color:#1f2937;position:relative}
+.seat .label-you{display:block;background:rgba(0,0,0,0.06);font-size:10px;padding:2px 6px;border-radius:8px;margin-top:6px}
+
+.profile-legend{display:flex;gap:18px;align-items:center;margin-top:12px}
+.profile-legend .legend-item{display:flex;gap:8px;align-items:center;color:#374151;font-weight:600}
+.legend-color{width:20px;height:20px;border-radius:6px}
+.legend-color.you{background:linear-gradient(90deg,#fde68a,#f59e0b)}
+.legend-color.male{background:linear-gradient(135deg,#dbeafe,#60a5fa)}
+.legend-color.female{background:linear-gradient(135deg,#fce7f3,#f472b6)}
+.legend-color.empty{background:#e5e7eb}
+
+.info-card ul{margin:8px 0 0 18px;color:#edf3ff}
+.card-blue{background:linear-gradient(90deg,#dbeafe,#93c5fd);color:#07204b}
+.card-green{background:linear-gradient(90deg,#dcfce7,#86efac);color:#064e2c}
+
+/* small adjustments for consistent spacing */
+.profile-page h3{margin:8px 0}
+.profile-page h4{margin:0 0 8px 0}
+
+/* Profile page specific styles */
+.profile-card{display:flex;flex-direction:column;gap:12px}
+.profile-top{display:flex;gap:16px;align-items:center}
+.profile-avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#e6f9ef,#d1fae5);color:var(--panel);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800}
+.profile-info h3{margin:0;color:var(--panel)}
+.profile-info .muted{color:#6b7280;margin:4px 0}
+.profile-body h4{margin:0 0 8px 0}
+.profile-quick ul{margin:8px 0 0 16px;color:var(--panel)}
+.profile-card .btn{margin-right:8px}
+
+/* Centered professional profile layout */
+.profile-center{position:relative;padding:12px 0;width:100%}
+.profile-main-card{width:100%;max-width:none;display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 24px;border-radius:0;margin:0;box-shadow:none;position:relative}
+.profile-main-card{background:linear-gradient(180deg,#ffffff,#fbfffe);border-top:1px solid rgba(2,6,23,0.03);border-bottom:1px solid rgba(2,6,23,0.03)}
+.profile-main-card .profile-avatar{width:120px;height:120px;font-size:42px}
+.profile-main-card h3{margin:6px 0 2px 0;font-size:20px;color:var(--panel);font-weight:700}
+.profile-main-card .muted{color:#6b7280;margin:2px 0}
+.divider{height:1px;background:rgba(2,6,23,0.04);width:100%;margin:12px 0;border-radius:2px}
+.profile-section{width:100%;text-align:left}
+.profile-section h4{margin:0 0 8px 0;color:#000000 !important}
+
+/* Ensure labels and values inside profile sections are fully black */
+.profile-section .pd-key{color:#000000 !important}
+.profile-section .pd-val{color:#000000 !important}
+
+/* Personal data grid (matching dashboard style) */
+.pd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
+.pd-item{display:flex;flex-direction:column;background:transparent;padding:8px;border-radius:8px}
+.pd-item.pd-wide{grid-column:1 / -1}
+.pd-key{font-size:13px;color:#000000 !important;font-weight:700;opacity:1}
+.pd-val{font-size:16px;color:#000000 !important;font-weight:800;margin-top:6px;opacity:1}
+
+@media (max-width:768px){
+	.pd-grid{grid-template-columns:1fr}
+}
+
+/* IPK box top-right */
+.ipk-box{position:absolute;top:16px;right:20px;background:#ffffff;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;align-items:center;gap:6px;box-shadow:0 8px 24px rgba(2,6,23,0.06);border:1px solid rgba(2,6,23,0.04);width:200px;z-index:30}
+.ipk-icon{font-size:28px;margin-bottom:4px;color:#d4af37}
+.ipk-label{font-size:13px;color:#000000;font-weight:700;text-align:center}
+.ipk-values{display:flex;flex-direction:column;line-height:1;align-items:center;text-align:center}
+.ipk-score{font-weight:800;color:#000000;font-size:20px;margin-top:2px}
+.ipk-honor{font-weight:800;font-size:16px;color:#000000}
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+	.profile-main-card{width:100%;padding:18px}
+	.ipk-box{position:static;align-self:center;margin-top:10px;padding:10px 12px;width:100%;max-width:320px}
+}
